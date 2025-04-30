@@ -11,3 +11,9 @@ darkModeIcon.addEventListener('click', () => {
     darkModeIcon.classList.remove('clicked');
 });
 
+const menuIcon = document.querySelector('#menu img')
+const nav = document.querySelector('#menu nav')
+
+menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active')
+})

@@ -8,7 +8,6 @@
     --amarelo1: #FCE3A0;
     --amarelo2: #FFCE71;
     --rosa: #FFB5C0;
-    --cinzel: "Cinzel", sans-serif;
     --amatic: "Amatic SC", sans-serif;
 }
 * {
@@ -18,8 +17,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 html, body{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 header{
@@ -30,35 +29,50 @@ header{
 }
 #menu{
     width: 90%;
-    display: flex; 
-    
+    display: flex;     
 }
 #menu img{
+    position: relative;
     width: 50px;
+
     transition: transform ease 0.2s;
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
-    
-
 }
 #menu img:hover{
     transform: scale(1.1);
-    transition: transform ease 0.2s;    
+    transition: transform ease 0.2s;   
 }
-
 #menu nav{
-    display: flex;
-    align-items: center;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 50px;
     height: 60px;
-    justify-content: space-evenly;
     
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all ease 0.3s;    
+}
+#menu nav.active{
+    width: 90%;
+    visibility: visible;
+    justify-content: space-evenly;
+    opacity: 1;
+
+    transition: all ease 0.3s;
 }
 #menu a{
     height: 60%;
     width: 15%;
     
+    pointer-events: all;
     text-decoration: none;
     font-family: var(--amatic);
     font-weight: 700;
@@ -70,23 +84,19 @@ header{
     background-color: var(--amarelo2);
     border-radius: 10px;
 
-    
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 #menu a:hover{
     letter-spacing: 2px;
     transition: letter-spacing ease 0.2s;
-
 }
 #mode{
     display: flex;
     justify-content: center;
     width: 10%;
     height: 100%
-    
 }
 #mode img{
     height: 50px;
@@ -97,15 +107,17 @@ header{
     cursor: pointer;
     transition: transform ease 0.3s;
 
-
     display: flex;
     align-self: center;
+}
+#mode img:hover{
+    transform: scale(1.1);
+    transition: transform ease 0.2s;
 }
 #lightmode{
     position: absolute;
     visibility: visible;
     pointer-events: auto;
-    
 }
 
 #lightmode.clicked{
@@ -138,7 +150,7 @@ main{
     background-color: var(--roxo2);
     
 }
-main > h1{
+main h1{
     
 }
 #caixateto{
@@ -152,4 +164,5 @@ footer p{
     text-align: center;
     font-size: small;
     line-height: 20px;
+    opacity: 70%;
 }
