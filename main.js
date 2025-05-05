@@ -16,4 +16,5 @@ const nav = document.querySelector('#menu nav')
 
 menuIcon.addEventListener('click', () => {
     nav.classList.toggle('active')
+    menuIcon.classList.toggle('rotate')
 })
