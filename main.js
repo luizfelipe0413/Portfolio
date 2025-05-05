@@ -18,3 +18,16 @@ menuIcon.addEventListener('click', () => {
     nav.classList.toggle('active')
     menuIcon.classList.toggle('rotate')
 })
+
+const emailcopy = document.querySelector('#email')
+
+emailcopy.addEventListener('click', () => {
+    navigator.clipboard.writeText(emailcopy.textContent)
+    .then(() => {
+        alert('Email copiado com sucesso !')
+    })
+    .catch(falha => {
+        alert('Falha ao copiar o email !')
+    })
+
+})

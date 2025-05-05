@@ -12,7 +12,7 @@
 }
 
 :root{
-    --roxo1: #B28AE4;
+--roxo1: #B28AE4;
     --roxo2: #976BCF;
     --amarelo1: #FCE3A0;
     --amarelo2: #FFCE71;
@@ -46,7 +46,7 @@ header{
     scale: 0.9;
     cursor: pointer;
 
-    transition: transform ease 0.2s;
+    transition: transform ease 0.3s;
 }
 #menu img:hover{
     transform: scale(1.1);
@@ -68,14 +68,14 @@ header{
     opacity: 0;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    transition: all ease 0.3s;    
+    transition: all ease 0.4s;    
 }
 #menu nav.active{
     width: 80%;
     visibility: visible;
-    justify-content: space-evenly;
+    
     opacity: 1;
 
     transition: all ease 0.3s;
@@ -91,6 +91,7 @@ header{
     font-size: 1.5em;
     text-align: center;
     letter-spacing: 5px;
+    color: #1E2575;
     transition: letter-spacing ease 0.2s;
 
     background-color: var(--amarelo2);
@@ -163,6 +164,10 @@ main{
     overflow: hidden;
     position: relative;
     
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 main::before{
@@ -175,16 +180,26 @@ main::before{
     background-position: center;
     
     animation: zoomOut 2s ease-out forwards;
-}
-main::before{
-    /* transform: scale(1); */
-
-}
-main h1{
-    
+    z-index: -1;
 }
 #caixateto{
+    background-color: var(--roxo2);
+    height: auto;
+    width: auto;
     
+    border-radius: 20px;
+    padding: 20px 25px;
+    transition: padding ease 0.2s;
+}
+#caixateto:hover{
+    padding: 25px 30px;
+    transition: padding ease 0.2s;
+    cursor: default;
+}
+#caixateto > h1{
+    color: #080A25;
+    text-align: center;
+    font-size: 1.8em;
 }
 footer{
     background-color: var(--rosa);
@@ -195,4 +210,8 @@ footer p{
     font-size: small;
     line-height: 20px;
     opacity: 70%;
+
+}
+footer #email{
+    cursor: pointer;
 }
