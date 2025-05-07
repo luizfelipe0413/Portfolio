@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+@font-face {
+    font-family: "TrajanPro-Regular";
+    src: url('fonts/TrajanProRegular.ttf') format('truetype');
+}
+
 :root{
     --roxo1: #B28AE4;
     --roxo2: #976BCF;
@@ -9,6 +14,7 @@
     --amarelo2: #FFCE71;
     --rosa: #FFB5C0;
     --amatic: "Amatic SC", sans-serif;
+   
 }
 * {
     margin: 0px;
@@ -26,6 +32,7 @@ header{
     height: 60px;
     width: 100%;
     display: flex;
+    box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.500)
 }
 #menu{
     width: 90%;
@@ -146,19 +153,74 @@ header{
     transition: transform ease-out 0.3s;
 }
 
+main{
+    height: 110vh;
+    width: 100%;
+    
+    overflow: hidden;
+    position: relative;
+
+    z-index: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+main::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: var(--roxo2);
+    background-image: url(images/quirrel_chilling.gif);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#caixamiku{
+    height: auto;
+    width: 230px;
+    margin-right: 25px;
+    
+}
+#caixamiku > p{
+    
+    font-family: 'TrajanPro-Regular', sans-serif;
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 3px 3px 4px black;
+    text-align: left;
+    
+    cursor: default;
+}
+#credits{
+    height: auto;
+    width: auto;
 
 
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+#credits small{
+    color: white;
+    opacity: 10%;
+    cursor: default;
+}
 footer{
     background-color: var(--rosa);
     padding: 10px 0px;
+    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.500)
 }
 footer p{
     text-align: center;
     font-size: small;
     line-height: 20px;
     opacity: 70%;
+    
 
 }
 footer #email{
     cursor: pointer;
+    text-decoration: underline;
 }

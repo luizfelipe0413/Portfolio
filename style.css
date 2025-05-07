@@ -25,9 +25,11 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 html, body{
     height: 100%;
     width: 100%;
+
 }
 
 header{
@@ -35,6 +37,7 @@ header{
     height: 60px;
     width: 100%;
     display: flex;
+    box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.500)
 }
 #menu{
     width: 90%;
@@ -159,7 +162,7 @@ header{
 main{
     height: 115vh;
     width: 100%;
-    box-sizing: border-box;
+    
     
     overflow: hidden;
     position: relative;
@@ -204,6 +207,7 @@ main::before{
 footer{
     background-color: var(--rosa);
     padding: 10px 0px;
+    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.500)
 }
 footer p{
     text-align: center;
@@ -214,4 +218,5 @@ footer p{
 }
 footer #email{
     cursor: pointer;
+    text-decoration: underline;
 }
