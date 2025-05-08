@@ -1,7 +1,14 @@
+/* -=-=-=-=-Global-=-=-=-=-=- */
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+@font-face {
+    font-family: "TrajanPro-Regular";
+    src: url('fonts/TrajanProRegular.ttf') format('truetype');
+}
 @keyframes zoomOut{
     from {
         transform: scale(2);
@@ -10,7 +17,6 @@
         transform: scale(1);
     }
 }
-
 :root{
     --roxo1: #B28AE4;
     --roxo2: #976BCF;
@@ -25,26 +31,30 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 html, body{
+
     height: 100%;
     width: 100%;
-
+    
 }
 
+/* -=-=-=-=-Global-=-=-=-=-=- */
+
+/* -=-=-=-=-Header-=-=-=-=-=- */
 header{
     background-color: var(--roxo1);
     height: 60px;
     width: 100%;
     display: flex;
-    box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.500)
+    box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.500);
+    position: relative;
 }
 #menu{
-    width: 90%;
-    display: flex;     
+    width: 100%;
+    display: flex;
 }
 #menu img{
-    position: relative;
+
     width: 10%;
     scale: 0.9;
     cursor: pointer;
@@ -76,7 +86,7 @@ header{
     transition: all ease 0.4s;    
 }
 #menu nav.active{
-    width: 80%;
+    width: 95%;
     visibility: visible;
     
     opacity: 1;
@@ -96,8 +106,10 @@ header{
     letter-spacing: 5px;
     color: #1E2575;
     transition: letter-spacing ease 0.2s;
+    white-space: nowrap;
+;
 
-    background-color: var(--amarelo2);
+background-color: var(--amarelo2);
     border-radius: 10px;
 
     display: flex;
@@ -108,7 +120,27 @@ header{
     letter-spacing: 2px;
     transition: letter-spacing ease 0.2s;
 }
-#mode{
+header h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    
+    font-family: "Cascadia Code", sans-serif;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 2px var(--roxo2);
+    white-space: nowrap;
+
+    opacity: 1;
+    transition: opacity ease 0.2s;
+}
+header h1.active{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity ease 0.2s;
+}
+/* #mode{
     display: flex;
     justify-content: center;
     width: 10%;
@@ -156,13 +188,33 @@ header{
     pointer-events: auto;
     transform: rotate(360deg);
     transition: transform ease-out 0.3s;
+} */
+
+/* -=-=-=-=-Header-=-=-=-=-=- */
+
+/* -=-=-=-=-Rodapé-=-=-=-=-=- */
+footer{
+    background-color: var(--rosa);
+    padding: 10px 0px;
+    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.500)
 }
+footer p{
+    text-align: center;
+    font-size: small;
+    line-height: 20px;
+    opacity: 70%;
 
+}
+footer #email{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* -=-=-=-=-Rodapé-=-=-=-=-=- */
 
-main{
+/* -=-=-=-=-Main -> Início-=-=-=-=-=- */
+.main{
     height: 115vh;
     width: 100%;
-    
     
     overflow: hidden;
     position: relative;
@@ -171,9 +223,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-main::before{
+.main::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -192,6 +243,7 @@ main::before{
     
     border-radius: 20px;
     padding: 20px 25px;
+    margin-bottom: 90px;
     transition: padding ease 0.2s;
 }
 #caixateto:hover{
@@ -204,19 +256,80 @@ main::before{
     text-align: center;
     font-size: 1.8em;
 }
-footer{
-    background-color: var(--rosa);
-    padding: 10px 0px;
-    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.500)
+/* -=-=-=-=-Main -> Início-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
+#projetos::before{
+    animation: none;
 }
-footer p{
+/* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
+#contato::before{
+    background-image: url(images/glase.jpg);
+    animation: none;
+}
+#caixacontato{
+    background-color: var(--roxo2);
+    height: 360px;
+    width: 700px;
+    
     text-align: center;
-    font-size: small;
-    line-height: 20px;
-    opacity: 70%;
+    margin-bottom: 90px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.787);
 
 }
-footer #email{
-    cursor: pointer;
-    text-decoration: underline;
+#caixacontato > h1{
+    padding: 20px;
+    
+    font-size: 2em;
 }
+#caixacontato img{
+    width: 100px;
+    margin-top: 90px;
+    margin-left: 20px;
+    transition: transform ease 0.3s;    
+}
+#caixacontato img:hover{
+    transform: scale(1.1);
+    transition: transform ease 0.3s;
+}
+/* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
+.main#sobremim{
+    justify-content: right;
+}
+#sobremim::before{
+    background-image: url(images/quirrel_chilling.gif);
+    animation: none;
+}
+#caixamiku{
+    height: auto;
+    width: 230px;
+    margin-right: 25px;
+}
+#caixamiku > p{
+    font-family: 'TrajanPro-Regular', sans-serif;
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 3px 3px 4px black;
+    text-align: left;
+    
+    cursor: default;
+}
+#credits{
+    height: auto;
+    width: auto;
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+#credits small{
+    color: white;
+    opacity: 10%;
+    cursor: default;
+}
+/* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
