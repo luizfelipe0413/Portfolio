@@ -260,7 +260,26 @@ footer #email{
 
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
 #projetos::before{
+    background-image: url(images/glase.jpg/    );
     animation: none;
+}
+#caixarin{ 
+    background-color: var(--roxo2);
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+#caixarin > h1{
+
+}
+#caixaprojetos{
+    background-color: ;
+    width: 90%;
+    height: ;
 }
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
 
