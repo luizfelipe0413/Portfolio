@@ -69,10 +69,10 @@ header{
 }
 #menu img{
 
-    width: 10%;
+    width: auto;
     scale: 0.9;
     cursor: pointer;
-
+    margin-left: 7px;
     transition: transform ease 0.3s;
 }
 #menu img:hover{
@@ -147,12 +147,12 @@ header h1{
     white-space: nowrap;
 
     opacity: 1;
-    transition: opacity ease 1s;
+    transition: opacity ease 0.3s;   cursor: default;
 }
 header h1.active{
     pointer-events: none;
     opacity: 0;
-    transition: opacity ease 0.2s;
+   
 }
 /* #mode{
     display: flex;
@@ -268,6 +268,10 @@ footer #email{
     color: #080A25;
     text-align: center;
     font-size: 1.8em;
+    font-family: var(--serrat);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.323);
+    
 }
 /* -=-=-=-=-Main -> Início-=-=-=-=-=- */
 
@@ -291,8 +295,9 @@ footer #email{
 #caixarin > h1{
     font-family: var(--serrat);    
     letter-spacing: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.323);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.323);
     padding: 35px;
+    cursor: default;
 }
 #listaprojetos{
     list-style: none;
@@ -361,7 +366,6 @@ footer #email{
     color: #484747;
     font-family: var(--serrat);
     font-weight: 700;
-    
 }
 .info span{
     font-family: var(--serrat);
@@ -390,11 +394,15 @@ footer #email{
 #caixacontato > h1{
     padding: 20px;
     
-    font-size: 2em;
+    font-size: 2.1em;
+    font-family: var(--serrat);
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.165);
+
 }
 #caixacontato img{
     width: 100px;
-    margin-top: 90px;
+    margin-top: 65px;
     margin-left: 20px;
     transition: transform ease 0.3s;    
 }
@@ -411,6 +419,7 @@ footer #email{
 #sobremim::before{
     background-image: url(images/quirrel_chilling.gif);
     animation: none;
+    background-position: right center;
 }
 #caixamiku{
     height: auto;

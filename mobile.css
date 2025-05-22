@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@media (max-width: 768px) {
+    #menu img{
+        width: auto;
+        margin-left: 3px;
+        padding-left: 5px;
+    }
+
+    header h1{
+        letter-spacing: normal;
+        left: 60%;
+    }
+    
+
+    .main::before{
+        background-position: right bottom;
+        animation: none;
+    }
+}
