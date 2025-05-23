@@ -1,19 +1,98 @@
 @charset "UTF-8";
 @media (max-width: 768px) {
+/* -=-=-=-=-Header-=-=-=-=-=- */
     #menu img{
         width: auto;
         margin-left: 3px;
         padding-left: 5px;
     }
-
     header h1{
         letter-spacing: normal;
         left: 60%;
     }
-    
+    header h1.active{
+        opacity: 1;
+    }
+    #menu nav{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        z-index: 9999;
 
+        background-color: #B28AE4;
+    }
+    #menu nav.active{
+        width: 100%;
+    }
+    #menu a{
+        width: 90%;
+        height: 50px;
+        margin: 5px auto;
+        
+        font-size: 1.8em;   
+    }
+/* -=-=-=-=-Header-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Início-=-=-=-=-=- */
     .main::before{
         background-position: right bottom;
         animation: none;
     }
+    #caixateto{
+        padding: 10px 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #caixateto:hover{
+        padding: 15px 20px;
+    }
+    #caixateto > h1{
+        font-size: 1.5em;
+    }
+/* -=-=-=-=-Main -> Início-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
+    #caixarin{
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 500px;
+    }
+    #caixarin > h1{
+        letter-spacing: 5px;
+        padding: 25px;
+        font-size: 1.8em;
+        text-align: center;
+    }
+    .itemprojeto{
+        height: 80px;
+    }
+    .itemprojeto:hover{
+        transform: none;
+        box-shadow: none;
+    }
+    .itemprojeto:active{
+        transform: scale(1.02);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.368);
+    }
+    .info h1{
+        font-size: 1.3em;
+    }
+    .info p{
+        font-size: 0.9em;
+    }
+    .info span{
+        font-size: 0.8em;
+    }
+/* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
+    #caixacontato{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+/* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
+
 }

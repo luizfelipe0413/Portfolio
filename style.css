@@ -35,10 +35,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 html, body{
-
     height: 100%;
     width: 100%;
-    
 }
 body::-webkit-scrollbar{
     width: 12px;
@@ -51,7 +49,6 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-track{
     background-color: rgba(0, 0, 0, 0.261);
 }
-
 /* -=-=-=-=-Global-=-=-=-=-=- */
 
 /* -=-=-=-=-Header-=-=-=-=-=- */
@@ -60,7 +57,7 @@ header{
     height: 60px;
     width: 100%;
     display: flex;
-    box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.500);
+    box-shadow: 0px 2px 4px inset rgba(0, 0, 0, 0.500);
     position: relative;
 }
 #menu{
@@ -68,7 +65,6 @@ header{
     display: flex;
 }
 #menu img{
-
     width: auto;
     scale: 0.9;
     cursor: pointer;
@@ -102,15 +98,11 @@ header{
 #menu nav.active{
     width: 95%;
     visibility: visible;
-    
     opacity: 1;
 
     transition: all ease 0.3s;
 }
 #menu a{
-    height: 60%;
-    width: 15%;
-    
     pointer-events: all;
     text-decoration: none;
     font-family: var(--amatic);
@@ -121,11 +113,12 @@ header{
     color: #1E2575;
     transition: letter-spacing ease 0.2s;
     white-space: nowrap;
-;
 
-background-color: var(--amarelo2);
+    background-color: var(--amarelo2);
     border-radius: 10px;
 
+    height: 60%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +133,6 @@ header h1{
     top: 50%;
     transform: translate(-50%, -50%);
 
-    
     font-family: "Cascadia Code", sans-serif;
     letter-spacing: 10px;
     text-shadow: 1px 1px 2px var(--roxo2);
@@ -153,58 +145,8 @@ header h1.active{
     pointer-events: none;
     opacity: 0;
    
+    /* -=-=-=-=-Header-=-=-=-=-=- */
 }
-/* #mode{
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    height: 100%
-}
-#mode img{
-    height: 50px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 100%;
-    background-color: #6f3ab3;
-    
-    cursor: pointer;
-    transition: transform ease 0.3s;
-
-    display: flex;
-    align-self: center;
-}
-#mode img:hover{
-    transform: scale(1.1);
-    transition: transform ease 0.2s;
-}
-#lightmode{
-    position: absolute;
-    visibility: visible;
-    pointer-events: auto;
-    transform: rotate(0deg);
-    transition: transform ease-out 0.3s;
-}
-
-#lightmode.clicked{
-    visibility: hidden;
-    pointer-events: none;
-    transform: rotate(360deg) ;
-    transition: transform ease-out 0.3s;
-}
-#darkmode{
-    position: absolute;
-    visibility: hidden;
-    pointer-events: none;
-    transform: rotate(0deg);
-    transition: transform ease-out 0.3s;
-}
-#darkmode.clicked{
-    visibility: visible;
-    pointer-events: auto;
-    transform: rotate(360deg);
-    transition: transform ease-out 0.3s;
-} */
-
-/* -=-=-=-=-Header-=-=-=-=-=- */
 
 /* -=-=-=-=-Rodapé-=-=-=-=-=- */
 footer{
@@ -228,14 +170,14 @@ footer #email{
 .main{
     height: 115vh;
     width: 100%;
-
+    
     overflow: hidden;
     position: relative;
-
-    z-index: 1;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .main::before{
     content: "";
@@ -255,8 +197,9 @@ footer #email{
     width: auto;
 
     border-radius: 20px;
-    padding: 20px 25px;
     margin-bottom: 90px;
+
+    padding: 20px 25px;
     transition: padding ease 0.2s;
 }
 #caixateto:hover{
@@ -271,7 +214,6 @@ footer #email{
     font-family: var(--serrat);
     font-weight: 600;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.323);
-    
 }
 /* -=-=-=-=-Main -> Início-=-=-=-=-=- */
 
@@ -286,11 +228,12 @@ footer #email{
     height: 500px;
     border-radius: 15px;
     box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
 }
 #caixarin > h1{
     font-family: var(--serrat);    
@@ -319,12 +262,10 @@ footer #email{
 #listaprojetos::-webkit-scrollbar {
     width: 10px;
 }
-
 #listaprojetos::-webkit-scrollbar-thumb {
     background-color: var(--roxo1);
     border-radius: 20px;
 }
-
 #listaprojetos::-webkit-scrollbar-track {
     background: rgba(0,0,0,0.1);
     border-radius: 20px;
@@ -389,7 +330,6 @@ footer #email{
     margin-bottom: 90px;
     border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.787);
-    
 }
 #caixacontato > h1{
     padding: 20px;
@@ -398,7 +338,6 @@ footer #email{
     font-family: var(--serrat);
     font-weight: 600;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.165);
-
 }
 #caixacontato img{
     width: 100px;
