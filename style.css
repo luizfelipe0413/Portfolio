@@ -1,16 +1,17 @@
 /* -=-=-=-=-Global-=-=-=-=-=- */
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: "TrajanPro-Regular";
     src: url('fonts/TrajanProRegular.ttf') format('truetype');
 }
+
 @keyframes zoomOut{
     from {
         transform: scale(2);
@@ -19,33 +20,39 @@
         transform: scale(1);
     }
 }
+
 :root{
     --roxo1: #B28AE4;
     --roxo2: #976BCF;
     --amarelo1: #FCE3A0;
     --amarelo2: #FFCE71;
     --rosa: #FFB5C0;
-    --amatic: "Amatic SC", sans-serif;
     --serrat: "Montserrat Alternates", sans-serif;
+    --poppins: "Poppins", sans-serif;
 }
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 html, body{
     height: 100%;
     width: 100%;
 }
+
 body::-webkit-scrollbar{
     width: 12px;
     background-color: #976BCF;
 }
+
 body::-webkit-scrollbar-thumb{
     border-radius: 10px;
     background-color: var(--roxo2);
 }
+
 body::-webkit-scrollbar-track{
     background-color: rgba(0, 0, 0, 0.261);
 }
@@ -60,10 +67,12 @@ header{
     box-shadow: 0px 2px 4px inset rgba(0, 0, 0, 0.500);
     position: relative;
 }
+
 #menu{
     width: 100%;
     display: flex;
 }
+
 #menu img{
     width: auto;
     scale: 0.9;
@@ -71,14 +80,17 @@ header{
     margin-left: 7px;
     transition: transform ease 0.3s;
 }
+
 #menu img:hover{
     transform: scale(1.1);
     transition: transform ease 0.2s;   
 }
+
 #menu img.rotate{
     transform: rotate(90deg);
     transition: transform ease 0.3s;
 }
+
 #menu nav{
     position: absolute;
     top: 0;
@@ -95,6 +107,7 @@ header{
     align-items: center;
     transition: all ease 0.4s;    
 }
+
 #menu nav.active{
     width: 95%;
     visibility: visible;
@@ -102,6 +115,7 @@ header{
 
     transition: all ease 0.3s;
 }
+
 #menu a{
     pointer-events: all;
     text-decoration: none;
@@ -123,10 +137,12 @@ header{
     align-items: center;
     justify-content: center;
 }
+
 #menu a:hover{
     letter-spacing: 2px;
     transition: letter-spacing ease 0.2s;
 }
+
 header h1{
     position: absolute;
     left: 50%;
@@ -141,12 +157,12 @@ header h1{
     opacity: 1;
     transition: opacity ease 0.3s;   cursor: default;
 }
+
 header h1.active{
     pointer-events: none;
     opacity: 0;
-   
-    /* -=-=-=-=-Header-=-=-=-=-=- */
-}
+}   
+/* -=-=-=-=-Header-=-=-=-=-=- */
 
 /* -=-=-=-=-Rodapé-=-=-=-=-=- */
 footer{
@@ -154,12 +170,14 @@ footer{
     padding: 10px 0px;
     box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.500)
 }
+
 footer p{
     text-align: center;
     font-size: small;
     line-height: 20px;
     opacity: 70%;
 }
+
 footer #email{
     cursor: pointer;
     text-decoration: underline;
@@ -175,10 +193,12 @@ footer #email{
     position: relative;
     
     display: flex;
+
     justify-content: center;
     align-items: center;
     z-index: 1;
 }
+
 .main::before{
     content: "";
     position: absolute;
@@ -191,6 +211,7 @@ footer #email{
     animation: zoomOut 2s ease-out forwards;
     z-index: -1;
 }
+
 #caixateto{
     background-color: var(--roxo2);
     height: auto;
@@ -202,11 +223,13 @@ footer #email{
     padding: 20px 25px;
     transition: padding ease 0.2s;
 }
+
 #caixateto:hover{
     padding: 25px 30px;
     transition: padding ease 0.2s;
     cursor: default;
 }
+
 #caixateto > h1{
     color: #080A25;
     text-align: center;
@@ -221,6 +244,7 @@ footer #email{
 .hero{
     background-color: var(--roxo2);
 }
+
 .caixahero{
     width: 800px;
     display:flex;
@@ -228,36 +252,41 @@ footer #email{
     align-items: center;    
     padding: 25px 0px;
 }
+
 .caixahero img{
     height: 150px;
     width: 150px;
 }
+
 .caixahero p{
-    font-family: var(--serrat);
+    font-family: var(--poppins);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.207);
 }
+
 .skillsBg{
     background-color: var(--roxo2);
     padding-bottom: 10px;
 }
+
 .skills{
     width: 800px;
     display: flex;
     justify-self: center;
     flex-direction: column;
     
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 50px;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     padding: 0px 15px;
-    
 }
+
 .skills h2{
     font-family: var(--serrat);
     text-shadow: 1px 1px 2px var(--roxo2);
     text-decoration: underline;
     padding: 25px 15px;
 }
+
 .skillsGrid{
     padding-top: 25px;
     width: 100%;
@@ -266,14 +295,17 @@ footer #email{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
+
 .skillsGrid div{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .skillsGrid img{
     height: 50px;
 }
+
 .skillsGrid p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
     font-weight: 600;
@@ -286,6 +318,7 @@ footer #email{
 .projetos{
     background-color: var(--roxo2);
 }
+
 #caixarin{
     background-color: var(--roxo2);
     width: 800px;
@@ -299,6 +332,7 @@ footer #email{
     flex-flow: column nowrap;
     justify-self: center;
 }
+
 #caixarin > h1{
     font-family: var(--serrat);    
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.179);
@@ -306,6 +340,7 @@ footer #email{
     padding: 25px 10px;
     cursor: default;
 }
+
 #listaprojetos{
     list-style: none;
     padding: 0;
@@ -315,26 +350,31 @@ footer #email{
     align-self: center;
     gap: 5px;
     width: 90%;
-    max-height: 350px;
+    max-height: 390px;
     overflow-y: auto;
     
     padding-right: 10px;
     padding-left: 10px;
 }
+
 #listaprojetos a{
     text-decoration: none;
 }
+
 #listaprojetos::-webkit-scrollbar {
     width: 10px;
 }
+
 #listaprojetos::-webkit-scrollbar-thumb {
     background-color: var(--roxo1);
     border-radius: 20px;
 }
+
 #listaprojetos::-webkit-scrollbar-track {
     background: rgba(0,0,0,0.1);
     border-radius: 20px;
 }
+
 .itemprojeto{
     display: flex;
     align-items: center;
@@ -344,10 +384,12 @@ footer #email{
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .itemprojeto:hover{
     transform: scale(1.02);
    /*  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.368); */
 }
+
 .itemprojeto img{
     width: 70px;
     height: 70px;
@@ -355,36 +397,42 @@ footer #email{
     border-radius: 5px;
     margin-right: 15px;
 }
+
 .info{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     gap: 3px;
 }
+
 .info h1{
     font-family: var(--serrat);
     font-weight: 600;
     font-size: 1.5em;
     color: #080A25;
 }
+
 .info p{
     font-size: 1.1em;
     color: #484747;
     font-family: var(--serrat);
     font-weight: 700;
 }
+
 .info span{
     font-family: var(--serrat);
     font-weight: 500;
     font-size: 0.9em;
     color: #6e6c6c;
 }
+
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
 
 /* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
 #contato::before{
     background-image: url(images/glasearoxa.jpg);
     animation: none;
+
 }
 #caixacontato{
     background-color: var(--roxo2);
@@ -396,6 +444,7 @@ footer #email{
     border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.787);
 }
+
 #caixacontato > h1{
     padding: 20px;
     
@@ -403,6 +452,7 @@ footer #email{
     font-family: var(--serrat);
     font-weight: 600;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.165);
+
 }
 #caixacontato img{
     width: 100px;
@@ -410,6 +460,7 @@ footer #email{
     margin-left: 20px;
     transition: transform ease 0.3s;    
 }
+
 #caixacontato img:hover{
     transform: scale(1.1);
     transition: transform ease 0.3s;
@@ -417,29 +468,60 @@ footer #email{
 /* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
 
 /* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
-.main#sobremim{
+#sobremim{
+    display: flex;
     justify-content: right;
-}
-#sobremim::before{
+
     background-image: url(images/quirrel_chilling.gif);
-    animation: none;
-    background-position: right center;
+    background-position: bottom right;
+
+    box-shadow: 0px 1px 6px inset rgba(0, 0, 0, 0.500);
 }
+
 #caixamiku{
-    height: auto;
-    width: 230px;
-    margin-right: 25px;
+    height: 400px;
+    width: 700px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    gap: 30px;
 }
+
+#caixamiku > h2{
+    font-family: 'TrajanPro-Regular', sans-serif;
+    color: white;
+    font-size: 1.3em;
+    text-shadow: 3px 3px 4px black;
+    cursor: default;
+
+    display: flex;
+    align-items: end;
+}
+
+#caixamiku > #sobreMim{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#caixamiku > #objetivo{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
 #caixamiku > p{
     font-family: 'TrajanPro-Regular', sans-serif;
     color: white;
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     text-shadow: 3px 3px 4px black;
-    text-align: left;
-    
     cursor: default;
+
+    padding-top: 5px;
+    border-top: 2px solid white;
 }
-#credits{
+
+/* #credits{
     height: auto;
     width: auto;
 
@@ -447,9 +529,11 @@ footer #email{
     bottom: 10px;
     left: 10px;
 }
+
 #credits small{
     color: white;
     opacity: 10%;
     cursor: default;
-}
+} */
+
 /* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
