@@ -10,30 +10,6 @@
         letter-spacing: normal;
         left: 60%;
     }
-    header h1.active{
-        opacity: 1;
-    }
-    #menu nav{
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        z-index: 9999;
-
-        background-color: #B28AE4;
-    }
-    #menu nav.active{
-        width: 100%;
-    }
-    #menu a{
-        width: 90%;
-        height: 50px;
-        margin: 5px auto;
-        
-        font-size: 1.8em;   
-    }
 /* -=-=-=-=-Header-=-=-=-=-=- */
 
 /* -=-=-=-=-Main -> Início-=-=-=-=-=- */
@@ -54,17 +30,48 @@
     }
 /* -=-=-=-=-Main -> Início-=-=-=-=-=- */
 
+/* -=-=-=-=-Main -> Hero-=-=-=-=-=- */
+.caixahero{
+    max-width: 100%;
+    
+}
+
+.caixahero img{
+    width: 100px;
+    height: 100px;
+}
+.caixahero p{
+    line-height: 17px;
+}
+
+/* -=-=-=-=-Main -> Skills-=-=-=-=-=- */
+.skills{
+    max-width: 95%;
+
+}
+
+.skillsGrid{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 25px;
+}
+/* -=-=-=-=-Main -> Skills-=-=-=-=-=- */
+
+/* -=-=-=-=-Main -> Hero-=-=-=-=-=- */
+
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
     #caixarin{
         margin-left: 10px;
         margin-right: 10px;
-        height: 500px;
+        height: 460px;
+        max-width: 100%;
+        padding-bottom: 10px;
     }
-    #caixarin > h1{
+    #caixarin > h2{
         letter-spacing: 5px;
         padding: 25px;
         font-size: 1.8em;
-        text-align: center;
+        text-align: left;
     }
     .itemprojeto{
         height: 80px;
@@ -88,11 +95,54 @@
     }
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
 
+/* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
+#sobremim{
+    height: 900px;
+    background-image: url(images/hkphonepic.jpeg);
+    background-position: center bottom;
+    justify-content: center;
+}
+
+#caixamiku{
+    height: 450px;
+    max-width: 700px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr 1fr;
+    gap: 0px;
+}
+
+#caixamiku > h2{
+    font-size: 1.2em;
+}
+
+#caixamiku > #sobremim{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#caixamiku > #objetivo{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+#caixamiku > p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
+
 /* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
-    #caixacontato{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+#caixacontato{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#caixacontato img{
+    width: 60px;
+}
 /* -=-=-=-=-Main -> Contato-=-=-=-=-=- */
 
+footer p{
+    font-size: 0.9em;
+}
 }

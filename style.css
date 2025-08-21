@@ -157,16 +157,21 @@ header h1.active{
 .caixahero img{
     height: 150px;
     width: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--roxo1);
 }
 
 .caixahero p{
     font-family: var(--poppins);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.207);
+    padding-left: 10px;
 }
+/* -=-=-=-=-Main -> Hero-=-=-=-=-=- */
 
+/* -=-=-=-=-Main -> Skills-=-=-=-=-=- */
 .skillsBg{
     background-color: var(--roxo2);
-    padding-bottom: 10px;
+    padding: 10px 0px;
 }
 
 .skills{
@@ -191,7 +196,6 @@ header h1.active{
 .skillsGrid{
     padding-top: 25px;
     width: 100%;
-    height: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -213,7 +217,7 @@ header h1.active{
     text-decoration: underline;
     
 }
-/* -=-=-=-=-Main -> Hero-=-=-=-=-=- */
+/* -=-=-=-=-Main -> Skills-=-=-=-=-=- */
 
 /* -=-=-=-=-Main -> Projetos-=-=-=-=-=- */
 .projetos{
@@ -234,7 +238,7 @@ header h1.active{
     justify-self: center;
 }
 
-#caixarin > h1{
+#caixarin > h2{
     font-family: var(--serrat);    
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.179);
     text-decoration: underline;
@@ -243,19 +247,18 @@ header h1.active{
 }
 
 #listaprojetos{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    width: 90%;
+    max-height: 390px;
+    
     display: flex;
     flex-direction: column;
     align-self: center;
     gap: 5px;
-    width: 90%;
-    max-height: 390px;
-    overflow-y: auto;
-    
     padding-right: 10px;
     padding-left: 10px;
+
+    list-style: none;
+    overflow-y: auto;
 }
 
 #listaprojetos a{
@@ -334,7 +337,7 @@ header h1.active{
     display: flex;
     justify-content: right;
 
-    background-image: url(images/quirrel_chilling.gif);
+    background-image: url(images/);
     background-position: bottom right;
 
     box-shadow: 0px 1px 6px inset rgba(0, 0, 0, 0.500);
@@ -375,7 +378,7 @@ header h1.active{
 #caixamiku > p{
     font-family: 'TrajanPro-Regular', sans-serif;
     color: white;
-    /* font-size: 0.9em; */
+    font-size: 0.9em;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.504);
     cursor: default;
 
