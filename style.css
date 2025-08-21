@@ -334,17 +334,20 @@ header h1.active{
 
 /* -=-=-=-=-Main -> Sobre Mim-=-=-=-=-=- */
 #sobremim{
+    height: 500px;
     display: flex;
     justify-content: right;
+    align-items: center;
 
-    background-image: url(images/);
-    background-position: bottom right;
-
+    background-image: url(images/hkbannerimage3.jpeg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 0px 1px 6px inset rgba(0, 0, 0, 0.500);
 }
 
 #caixamiku{
-    height: 400px;
+    height: 300px;
     width: 700px;
     box-sizing: border-box;
     padding: 20px;
@@ -352,6 +355,8 @@ header h1.active{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.3fr 1fr;
     gap: 30px;
+
+    margin-top: 20px;
 }
 
 #caixamiku > h2{
