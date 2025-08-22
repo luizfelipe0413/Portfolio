@@ -101,6 +101,7 @@
     background-image: url(images/hkphonepic.jpeg);
     background-position: center bottom;
     justify-content: center;
+    align-items: start;
 }
 
 #caixamiku{
